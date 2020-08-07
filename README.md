@@ -14,7 +14,7 @@ wordpress-backup is a simple [Docker][1] container that helps you backup and res
 - [x] You're about to spin up a docker container for local development and want a simple backup service
 - [x] You're looking at migrating from a manual backup process from docker volumes
 
-*Step 1*: Use the cookie-cutter [wordpress quickstart](https://github.com/angelo-v/wordpress-backup-quickstart) that Angelo-v has already supplied 
+#### *Step 1*: Use the cookie-cutter [wordpress quickstart](https://github.com/angelo-v/wordpress-backup-quickstart) that Angelo-v has already supplied 
 
 This quickstart will get you up and running relatively quickly. 
 Sync to a new directory and update the env files:
@@ -51,7 +51,7 @@ Sync to a new directory and update the env files:
      ...
     ...
 
-*Step 2*: Deploy the containers!
+#### *Step 2*: Deploy the containers!
 
 Open terminal and navigate to your repo directory. Then run `make up` to deploy the containers in detatched mode 
 
