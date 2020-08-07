@@ -265,11 +265,9 @@ That's it! `http://localhost:8080/` should show your blog now.
 
 #### mysqldump: Error: 'Access denied; you need (at least one of) the PROCESS privilege(s) for this operation' when trying to dump tablespaces
 
-[This appears to be caused by MySql 5.7.31](https://forums.cpanel.net/threads/cpanel-33473-mysql-dump-process-privilege-error-after-5-7-31-update.675657/)
-Fix: Set your docker-compose.yml to
-    
-    mysql:
-     image: mysql:5.7.3.0
+[This appears to be caused by MySql 5.7.31+ changes](https://forums.cpanel.net/threads/cpanel-33473-mysql-dump-process-privilege-error-after-5-7-31-update.675657/)
+Fix: may not actually affect you - only affects table spaces
+
 
 
 ## Docker Compose example
