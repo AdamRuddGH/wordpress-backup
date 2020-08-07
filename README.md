@@ -3,11 +3,13 @@ wordpress-backup
 
 wordpress-backup is a simple [Docker][1] container that helps you backup and restore your WordPress blog.
 
-<p align="center">
-[![Dockerhub badge](http://dockeri.co/image/aveltens/wordpress-backup)](https://hub.docker.com/r/aveltens/wordpress-backup)
 
-[1]: https://www.docker.com/ 
-</p>
+ 
+ [![Dockerhub badge](http://dockeri.co/image/aveltens/wordpress-backup)](https://hub.docker.com/r/aveltens/wordpress-backup)
+
+ [1]: https://www.docker.com/ 
+
+
 
 
 ## Setting up a clean wordpress environment from scratch with backup functionality
