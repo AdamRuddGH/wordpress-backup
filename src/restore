@@ -4,7 +4,7 @@ set -e
 if ! [[ "$1" ]]
 then
     echo "Error: Backup name missing"
-    echo "Please specify a backup name, e.g. 'restore 20141104'"
+    echo "Please specify a backup name, e.g. 'restore 20141104114530' (2014-11-04 11:45:30)"
     echo "Finished: FAILURE"
     exit 1
 fi
