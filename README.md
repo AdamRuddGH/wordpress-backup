@@ -10,32 +10,43 @@ wordpress-backup is a simple [Docker][1] container that helps you backup and res
 
 ## Setting up a clean wordpress environment from scratch with Backups
 
-Use case
-- You're about to spin up a docker container for local development and want a simple backup service
-- You're looking at migrating from a manual backup process from docker volumes
+**Use case**
+- [x] You're about to spin up a docker container for local development and want a simple backup service
+- [x] You're looking at migrating from a manual backup process from docker volumes
 
 *Step 1*: Use the cookie-cutter [wordpress quickstart](https://github.com/angelo-v/wordpress-backup-quickstart) that Angelo-v has already supplied 
 
 This quickstart will get you up and running relatively quickly. 
 Sync to a new directory and update the env files. 
 
-Optional 1: you may want to mess with the network links, and define a port for wordpress acccess on localhost if you're not interested in a virtual host
+**Optional 1:** you may want to mess with the network links, and define a port for wordpress acccess on localhost if you're **not** interested in a virtual host
    
-   ...
-   mysql:
-    networks:
+    ...
+    mysql:
+     networks:
         - <a_group_network_name>
-   ...
+    ...
+    wordpress:
+     networks:
+        - group_network
+    ...
+    backup:
+     networks:
+        - group_network
+    ...
+    networks:
+     group_network:
+    ...
    
-Optional 2: You want to see action immediately on localhost
+**Optional 2:** You want to see action immediately on localhost
 
-   ...
-   wordpress:
     ...
-    ports:
-     - "127.0.0.1:8080:80"
+    wordpress:
+     ...
+     ports:
+      - "127.0.0.1:8080:80"
+     ...
     ...
-   ...
 
 
 
