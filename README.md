@@ -94,7 +94,19 @@ Yep. That's all you need to create a complete backup of your blog HTML pages and
 
 *Step 3*: Restore the backup from a specific day
 
+Remember to reference the correct name when restoring 
+output of `docker ps`:
+
+    CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    80b9d92ad06c        wordpress                   "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes        127.0.0.1:8080->80/tcp   wordpress-backup-quickstart_wordpress_1
+    f1cfa308a1cf        aveltens/wordpress-backup   "/entrypoint.sh cron…"   9 minutes ago       Up 5 minutes                                 wordpress-backup-quickstart_backup_1
+    1786ead3c664        mysql:latest                "docker-entrypoint.s…"   9 minutes ago       Up 5 minutes        3306/tcp, 33060/tcp      wordpress-backup-quickstart_mysql_1
+
+THE ACTIONS YOU SHOULD TAKE TO RESORE
+
     docker exec backup-my-blog restore 20141114
+    
+    eg: docker exec <name-of-docker-backup-container> restore <YYMMDD>
 
 Replace 20141114 by the date, you actually made a backup.
 
